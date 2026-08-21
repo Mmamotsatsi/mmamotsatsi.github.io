@@ -348,3 +348,39 @@ footer{
     grid-template-columns:1fr 1fr;
   }
 }
+/* Print Portfolio */
+
+@media print {
+
+  nav,
+  .buttons,
+  footer {
+    display:none !important;
+  }
+
+  body{
+    background:white;
+  }
+
+  section{
+    page-break-inside:avoid;
+    padding:30px 0;
+  }
+
+  .gallery{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .gallery img{
+    break-inside:avoid;
+  }
+
+  h1{
+    font-size:42px;
+  }
+
+  h2{
+    font-size:28px;
+  }
+
+}
